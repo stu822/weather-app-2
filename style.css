@@ -14,7 +14,18 @@ main {
     height: 100vh;
     width: 100%
 }
+/* Form */
+.location-form {
+    width: 80%;
+}
 
+.location-form form .form-group label{
+    display: block;
+}
+.location-form form .form-group input {
+    width: 100%;
+    padding: 10px;
+}
 .weather-display {
     width: 80%;
 }
