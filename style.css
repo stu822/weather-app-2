@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%
+}
+
+.weather-display {
+    width: 90%;
+}
+.weather-display .container {
+    display: flex;
+}
+
+
+.weather-display h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+/* Daily Forecast Display */
+.daily-display h2 {
+    text-align: center;
+}
+.daily-forecast {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "temp icon"
+    "forecast icon";
+    grid-template-columns: 2fr 1fr;
+}
+
+.daily-forecast .header {
+    grid-area: header;
+    text-align: center;
+}
+.daily-forecast .temp {
+    grid-area: temp;
+}
+.daily-forecast .short-forecast {
+    grid-area: forecast;
+}
+.daily-forecast img {
+    grid-area: icon;
+}
+
+/* Hourly Forecast Display */
+.hourly-display h2 {
+    text-align: center;
+}
+.hourly-forecast {
+    display: grid;
+    grid-template-areas: 
+    "hourly-time temp"
+    "description icon";
+}
+
+.hourly-forecast .time {
+    grid-area: hourly-time;
+}
+.hourly-forecast .hourly-temp {
+    grid-area: temp;
+}
+.hourly-forecast .hourly-description {
+    grid-area: description;
+}
+.hourly-forecast img {
+    grid-area: icon;
+}
