@@ -16,64 +16,112 @@ main {
 }
 
 .weather-display {
-    width: 90%;
+    width: 80%;
 }
 .weather-display .container {
     display: flex;
+    width: 100%;
 }
 
 
 .weather-display h1 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    font-size: 3.5rem;
+    font-weight: 400;
+
 }
 /* Daily Forecast Display */
+.daily-display {
+    align-items: center;
+    width: 100%;
+    flex: 2;
+    padding: 20px;
+    border: 1px solid gray;
+}
 .daily-display h2 {
     text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
 }
 .daily-forecast {
+    margin: 0 auto;
+    width: 100%;
     display: grid;
     grid-template-areas: 
     "header header"
     "temp icon"
     "forecast icon";
     grid-template-columns: 2fr 1fr;
+    justify-content: end;
+    margin: 15px 0;
+    
 }
 
 .daily-forecast .header {
     grid-area: header;
     text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 20px;
 }
 .daily-forecast .temp {
     grid-area: temp;
+    font-size: 3rem;
+    font-weight: 300;
+    flex: 3;
 }
 .daily-forecast .short-forecast {
     grid-area: forecast;
+    font-size: 1.1rem;
 }
 .daily-forecast img {
     grid-area: icon;
+    justify-self: end;
 }
 
 /* Hourly Forecast Display */
+.hourly-display {
+    width: 100%;
+    flex: 1;
+    border: 1px solid black;
+    padding: 20px;
+}
 .hourly-display h2 {
     text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
 }
 .hourly-forecast {
+    width: 100%;
+    margin-bottom: 20px;
     display: grid;
     grid-template-areas: 
     "hourly-time temp"
     "description icon";
 }
 
+.hourly-forecast p {
+    margin: 5px 0;
+}
+
 .hourly-forecast .time {
     grid-area: hourly-time;
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 .hourly-forecast .hourly-temp {
     grid-area: temp;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 .hourly-forecast .hourly-description {
     grid-area: description;
 }
 .hourly-forecast img {
     grid-area: icon;
+}
+
+.hourly-forecast img, .hourly-forecast .hourly-temp {
+    justify-self: center;
 }
