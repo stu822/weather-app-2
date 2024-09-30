@@ -1,89 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>My Weather App</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        
-        <section class="weather-display">
-            <h1 class="display-1">My Weather App</h1>
-            <div class="location-form">
-                <form action="">
-                    <div class="form-group">
-                        <label for="location">Enter Location</label>
-                        <input type="text">
-                    </div>
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+      <section class="weather-display">
+        <h1 class="display-1">My Weather App</h1>
+        <div class="location-form">
+          <form action="">
+            <div class="form-group">
+              <input type="text" / placeholder="Enter location (within the US)">
             </div>
-            <div class="container">
-                <div class="daily-display">
-                    <h2>Daily Forecast</h2>
-                    <div class="daily-forecast">
-                            <h3 class="header">Today</h3>
-                            <p class="temp"><span id="today-temp">60</span><sup>o</sup></p>
-                            <p class="short-forecast">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, repellendus.</p>
-                            <img src="daily-image.png" alt="">
-                    </div>
-                    <div class="daily-forecast">
-                            <h3 class="header">Today</h3>
-                            <p class="temp"><span id="today-temp">60</span><sup>o</sup></p>
-                            <p class="short-forecast">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, repellendus.</p>
-                            <img src="daily-image.png" alt="">
-                    </div>
-                    <div class="daily-forecast">
-                            <h3 class="header">Today</h3>
-                            <p class="temp"><span id="today-temp">60</span><sup>o</sup></p>
-                            <p class="short-forecast">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, repellendus.</p>
-                            <img src="daily-image.png" alt="">
-                    </div>
-                </div>
-                <div class="hourly-display">
-                    <h2>Hourly</h2>
-                    <div class="hourly-forecast">
-                        <p class="time">6:00pm</p>
-                        <p class="hourly-temp"><span>72</span><sup>o</sup></p>
-                        <p class="hourly-description">Lorem, ipsum.</p>
-                        <img src="hourly-image.png" alt="">
-                    </div>
-                    <div class="hourly-forecast">
-                        <p class="time">6:00pm</p>
-                        <p class="hourly-temp"><span>72</span><sup>o</sup></p>
-                        <p class="hourly-description">Lorem, ipsum.</p>
-                        <img src="hourly-image.png" alt="">
-                    </div>
-                    <div class="hourly-forecast">
-                        <p class="time">6:00pm</p>
-                        <p class="hourly-temp"><span>72</span><sup>o</sup></p>
-                        <p class="hourly-description">Lorem, ipsum.</p>
-                        <img src="hourly-image.png" alt="">
-                    </div>
-                    <div class="hourly-forecast">
-                        <p class="time">6:00pm</p>
-                        <p class="hourly-temp"><span>72</span><sup>o</sup></p>
-                        <p class="hourly-description">Lorem, ipsum.</p>
-                        <img src="hourly-image.png" alt="">
-                    </div>
-                    <div class="hourly-forecast">
-                        <p class="time">6:00pm</p>
-                        <p class="hourly-temp"><span>72</span><sup>o</sup></p>
-                        <p class="hourly-description">Lorem, ipsum.</p>
-                        <img src="hourly-image.png" alt="">
-                    </div>
-                   
-
-                </div>
+          </form>
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="container">
+          <div class="daily-display">
+            <h2>Daily Forecast</h2>
+            <div class="daily-forecast">
+              <h3 class="header">Today</h3>
+              <p class="temp"><span id="today-temp">60</span><sup>o</sup></p>
+              <p class="short-forecast">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Ratione, repellendus.
+              </p>
+              <img src="daily-image.png" alt="" />
             </div>
-        </section>
+            <div class="daily-forecast">
+              <h3 class="header">Today</h3>
+              <p class="temp"><span id="today-temp">60</span><sup>o</sup></p>
+              <p class="short-forecast">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Ratione, repellendus.
+              </p>
+              <img src="daily-image.png" alt="" />
+            </div>
+            <div class="daily-forecast">
+              <h3 class="header">Today</h3>
+              <p class="temp"><span id="today-temp">60</span><sup>o</sup></p>
+              <p class="short-forecast">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Ratione, repellendus.
+              </p>
+              <img src="daily-image.png" alt="" />
+            </div>
+          </div>
+          <div class="hourly-display">
+            <h2>Hourly</h2>
+            <div class="hourly-forecast">
+              <p class="time">6:00pm</p>
+              <p class="hourly-temp"><span>72</span><sup>o</sup></p>
+              <p class="hourly-description">Lorem, ipsum.</p>
+              <img src="hourly-image.png" alt="" />
+            </div>
+            <div class="hourly-forecast">
+              <p class="time">6:00pm</p>
+              <p class="hourly-temp"><span>72</span><sup>o</sup></p>
+              <p class="hourly-description">Lorem, ipsum.</p>
+              <img src="hourly-image.png" alt="" />
+            </div>
+            <div class="hourly-forecast">
+              <p class="time">6:00pm</p>
+              <p class="hourly-temp"><span>72</span><sup>o</sup></p>
+              <p class="hourly-description">Lorem, ipsum.</p>
+              <img src="hourly-image.png" alt="" />
+            </div>
+            <div class="hourly-forecast">
+              <p class="time">6:00pm</p>
+              <p class="hourly-temp"><span>72</span><sup>o</sup></p>
+              <p class="hourly-description">Lorem, ipsum.</p>
+              <img src="hourly-image.png" alt="" />
+            </div>
+            <div class="hourly-forecast">
+              <p class="time">6:00pm</p>
+              <p class="hourly-temp"><span>72</span><sup>o</sup></p>
+              <p class="hourly-description">Lorem, ipsum.</p>
+              <img src="hourly-image.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

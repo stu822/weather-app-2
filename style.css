@@ -1,138 +1,148 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
 }
 /* Form */
 .location-form {
-    width: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+form {
+  width: 80%;
 }
 
-.location-form form .form-group label{
-    display: block;
+.location-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
 }
-.location-form form .form-group input {
-    width: 100%;
-    padding: 10px;
+
+.location-form button {
+  padding: 10px;
+  display: inline-block;
+  margin-left: 5px;
 }
 .weather-display {
-    width: 80%;
+  width: 80%;
 }
 .weather-display .container {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
-
 .weather-display h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 3.5rem;
-    font-weight: 400;
-
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3.5rem;
+  font-weight: 400;
 }
 /* Daily Forecast Display */
 .daily-display {
-    align-items: center;
-    width: 100%;
-    flex: 2;
-    padding: 20px;
-    border: 1px solid gray;
+  align-items: center;
+  width: 100%;
+  flex: 2;
+  padding: 20px;
+  border: 1px solid gray;
 }
 .daily-display h2 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
 }
 .daily-forecast {
-    margin: 0 auto;
-    width: 100%;
-    display: grid;
-    grid-template-areas: 
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
     "header header"
     "temp icon"
     "forecast icon";
-    grid-template-columns: 2fr 1fr;
-    justify-content: end;
-    margin: 15px 0;
-    
+  grid-template-columns: 2fr 1fr;
+  justify-content: end;
+  margin: 15px 0;
 }
 
 .daily-forecast .header {
-    grid-area: header;
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: 400;
-    margin-bottom: 20px;
+  grid-area: header;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 20px;
 }
 .daily-forecast .temp {
-    grid-area: temp;
-    font-size: 3rem;
-    font-weight: 300;
-    flex: 3;
+  grid-area: temp;
+  font-size: 3rem;
+  font-weight: 300;
+  flex: 3;
 }
 .daily-forecast .short-forecast {
-    grid-area: forecast;
-    font-size: 1.1rem;
+  grid-area: forecast;
+  font-size: 1.1rem;
 }
 .daily-forecast img {
-    grid-area: icon;
-    justify-self: end;
+  grid-area: icon;
+  justify-self: end;
 }
 
 /* Hourly Forecast Display */
 .hourly-display {
-    width: 100%;
-    flex: 1;
-    border: 1px solid black;
-    padding: 20px;
+  width: 100%;
+  flex: 1;
+  border: 1px solid black;
+  padding: 20px;
 }
 .hourly-display h2 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
 }
 .hourly-forecast {
-    width: 100%;
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-areas: 
+  width: 100%;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-areas:
     "hourly-time temp"
     "description icon";
 }
 
 .hourly-forecast p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .hourly-forecast .time {
-    grid-area: hourly-time;
-    font-size: 1.3rem;
-    font-weight: 500;
+  grid-area: hourly-time;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 .hourly-forecast .hourly-temp {
-    grid-area: temp;
-    font-size: 1.5rem;
-    font-weight: 400;
+  grid-area: temp;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 .hourly-forecast .hourly-description {
-    grid-area: description;
+  grid-area: description;
 }
 .hourly-forecast img {
-    grid-area: icon;
+  grid-area: icon;
 }
 
-.hourly-forecast img, .hourly-forecast .hourly-temp {
-    justify-self: center;
+.hourly-forecast img,
+.hourly-forecast .hourly-temp {
+  justify-self: center;
 }
