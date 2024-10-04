@@ -26,12 +26,12 @@
         <div class="location-form">
           <form action="">
             <div class="form-group">
-              <input type="text" / placeholder="Enter location (within the US)">
+              <input type="text" id="location"  placeholder="Enter location (within the US)">
             </div>
+            <button type="submit" id="location-submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </form>
-          <button type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
         </div>
         <div class="container">
           <div class="daily-display">
@@ -100,6 +100,7 @@
         </div>
       </section>
     </main>
-    <script src="app.js"></script>
+    <script src="apiKey.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
