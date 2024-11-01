@@ -6,6 +6,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  /* Testing Remove Below */
+  /* background-color: black;
+  color: white; */
+  /* Remove above */
 }
 main {
   display: flex;
@@ -23,14 +27,19 @@ main {
   margin-bottom: 10px;
 }
 form {
-  width: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.location-form .form-group {
+  width: 100%;
+}
 .location-form .form-group input {
   width: 100%;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .location-form button {
@@ -40,10 +49,12 @@ form {
 }
 .weather-display {
   width: 80%;
+  height: 100%;
 }
 .weather-display .container {
   display: flex;
   width: 100%;
+  height: 75%;
 }
 
 .weather-display h1 {
@@ -52,17 +63,23 @@ form {
   font-size: 3.5rem;
   font-weight: 400;
 }
+
+.location-name {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 400;
+}
 /* Daily Forecast Display */
 .daily-display {
   align-items: center;
   width: 100%;
   flex: 2;
   padding: 20px;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
 }
 .daily-display h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 500;
 }
 .daily-forecast {
@@ -98,18 +115,19 @@ form {
 .daily-forecast img {
   grid-area: icon;
   justify-self: end;
+  border-radius: 5px;
 }
 
 /* Hourly Forecast Display */
 .hourly-display {
   width: 100%;
   flex: 1;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 20px;
 }
 .hourly-display h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 500;
 }
 .hourly-forecast {
@@ -140,6 +158,7 @@ form {
 }
 .hourly-forecast img {
   grid-area: icon;
+  border-radius: 5px;
 }
 
 .hourly-forecast img,
