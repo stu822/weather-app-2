@@ -22,19 +22,19 @@ function submitLocation(e) {
   const location = locationInput.value;
   clearForecasts();
   getGeoCode(location);
+  // debugNetlify(location);
   locationInput.value = "";
 }
 // API Call Fuctions
 function getGeoCode(input) {
   let forecastData;
-  fetch(
-    `https://api.mapbox.com/search/geocode/v6/forward?q=${input}&access_token=${API_KEY}`
-  )
+  fetch(`/.netlify/functions/getGeocode/getGeocode?location=${input}`)
     .then((resObj) => resObj.json())
     .then((data) => {
-      const latitude = data.features[0].properties.coordinates.latitude;
-      const longitude = data.features[0].properties.coordinates.longitude;
-      const locationName = data.features[0].properties.name;
+      const dataObj = data.message;
+      const latitude = dataObj.features[0].properties.coordinates.latitude;
+      const longitude = dataObj.features[0].properties.coordinates.longitude;
+      const locationName = dataObj.features[0].properties.name;
       locationDisplay.textContent = locationName;
       return fetch(`https://api.weather.gov/points/${latitude},${longitude}`);
     })
@@ -168,4 +168,10 @@ function createHourlyForecast(time, temp, forecast, icon) {
 function clearForecasts() {
   dailyContainer.innerHTML = "<h2>Daily Forecast</h2>";
   hourlyContainer.innerHTML = "<h2>Hourly Forecast</h2>";
+}
+
+function debugNetlify(input) {
+  fetch(`/.netlify/functions/getGeocode/getGeocode?location=${input}`)
+    .then((res) => res.json())
+    .then((res) => console.log(res));
 }
